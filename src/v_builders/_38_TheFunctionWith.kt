@@ -12,7 +12,7 @@ fun todoTask38(): Nothing = TODO(
     """
 )
 
-fun <T, R> myWith(receiver: T, f: T.() -> R): R = todoTask38()
+fun <T, R> myWith(receiver: T, f: T.() -> R): R = receiver.f()
 
 fun buildString(): String {
     val stringBuilder = StringBuilder()

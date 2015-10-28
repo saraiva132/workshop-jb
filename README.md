@@ -3,4 +3,4 @@ workshop-jb
 
 Kotlin workshop
 
-Run 'All tests' and fix them. =)
+My resolution of the Kotlin workshop tutorial exercises.

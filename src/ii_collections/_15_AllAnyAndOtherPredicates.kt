@@ -13,10 +13,7 @@ fun example2(list: List<Int>) {
     val firstPositiveNumber: Int? = list.firstOrNull { it > 0 }
 }
 
-fun Customer.isFrom(city: City): Boolean {
-    // Return true if the customer is from the given city
-    todoCollectionTask()
-}
+fun Customer.isFrom(city: City): Boolean = this.city.equals(city)
 
 fun Shop.checkAllCustomersAreFrom(city: City): Boolean {
     // Return true if all customers are from the given city

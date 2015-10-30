@@ -15,8 +15,6 @@ fun todoTask12(): Nothing = TODO(
     documentation = doc12()
 )
 
-fun task12(): List<Int> {
-    todoTask12()
-    return arrayListOf(1, 5, 2)
-}
+//Kotlin allows one line functions, thus, since arraylist extends both mutableList we can use its methods.
+fun task12(): List<Int> = arrayListOf(1, 5, 2).sortedDescending()
 

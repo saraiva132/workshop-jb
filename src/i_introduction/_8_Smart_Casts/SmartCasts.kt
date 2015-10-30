@@ -6,10 +6,11 @@ interface Expr
 class Num(val value: Int) : Expr
 class Sum(val left: Expr, val right: Expr) : Expr
 
+//Abstract calls using expressions can be evaluated using the when .. is operator.
 fun eval(e: Expr): Int =
         when (e) {
-            is Num -> todoTask6(e)
-            is Sum -> todoTask6(e)
+            is Num ->  e.value
+            is Sum ->  eval(e.left) + eval(e.right)
             else -> throw IllegalArgumentException("Unknown expression")
         }
 

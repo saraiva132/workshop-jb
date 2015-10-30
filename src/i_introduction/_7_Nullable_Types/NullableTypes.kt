@@ -15,7 +15,13 @@ fun todoTask5(client: Client?, message: String?, mailer: Mailer): Nothing = TODO
 fun sendMessageToClient(
         client: Client?, message: String?, mailer: Mailer
 ) {
-    todoTask5(client, message, mailer)
+    //Null-safety prevents Null-Pointer Exceptions and allows safety chains
+    val email = client?.personalInfo?.email
+
+    //Instead of three null verifications phases we only need one
+    if(email != null && message != null){
+        return mailer.sendMessage(email,message)
+    }
 }
 
 class Client (val personalInfo: PersonalInfo?)
